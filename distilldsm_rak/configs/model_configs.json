@@ -1,0 +1,51 @@
+{
+    "train": {
+        "data": "dataset/New_Dataset/train",
+        "image_path": "dataset/New_Dataset/img_volumes",
+        "mask_path": "dataset/New_Dataset/labels",
+        "data_split": "distilldsm_rak/configs/data_split.json",
+        "batch_size": 4,
+        "epochs": 30,
+        "gpu": "True",
+        "seg_lr": 1e-5,
+        "w_decay": 1e-5,
+        "checkpoint": "model_weights/model_weights_best_seg.pt",
+        "save_path": "model_weights/"
+        
+        
+    },
+    "inference": {
+        "model_file": "model_weights/model_weights_best_seg.pt",
+        "image_path": "dataset/New_Dataset/img_volumes",
+        "mask_path": "dataset/New_Dataset/labels",
+        "data_split": "configs/data_split.json",
+        "batch_size": 1,
+        "epochs": 30,
+        "gpu": "True",
+        
+        "checkpoint": "model_weights/model_weights_best_seg.ptt",
+        "model_name_onnx": "model_weights_best_seg.onnx",
+        "input_shape": [
+            1,
+            1,
+            145,
+            128,128
+        ],
+       
+        "max_samples": 10
+    },
+    "export": {
+        "checkpoint": "model_weights/model_weights_best_seg.pt",
+        "data_split": "configs/data_split.json",
+        "input_shape": [
+            1,
+            1,
+            145,
+            128,
+            128
+        ],
+        "model_name_onnx": "model_weights_best_seg.onnx",
+        "model_name": "model_weights_best_seg "
+        
+    }
+}

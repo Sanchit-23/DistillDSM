@@ -1,0 +1,11 @@
+{
+    "model": {
+        "url_model": "http://kliv.iitkgp.ac.in/projects/miriad/model_weights/bmi7/model_weights.zip",
+        "dest_path_model": "model_weights/model.zip"
+    },
+   
+    "test_data": {
+        "url_data": "http://kliv.iitkgp.ac.in/projects/miriad/sample_data/bmi7/data.zip",
+        "dest_path_data": "test_data/sample_data.zip"
+    }
+}
